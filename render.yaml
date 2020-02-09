@@ -8,8 +8,8 @@ services:
     plan: 'starter plus'
     env: docker
     repo: https://github.com/nextcloud/docker.git
-    dockerfilePath: ./18.0/apache/Dockerfile
-    dockerContext: ./18.0/apache/
+    dockerfilePath: /.examples/dockerfiles/full/apache/Dockerfile
+    dockerContext: /.examples/dockerfiles/full/apache
     disk:
       name: data
       mountPath: /var/www/html
