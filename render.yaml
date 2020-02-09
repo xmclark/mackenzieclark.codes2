@@ -10,9 +10,6 @@ services:
     repo: https://github.com/nextcloud/docker.git
     dockerfilePath: /.examples/dockerfiles/cron/apache/Dockerfile
     dockerContext: /.examples/dockerfiles/cron/apache
-#    disk:
-#      name: data
-#      mountPath: /var/www/html
     envVars:
       - key: POSTGRES_USER
         fromDatabase:
@@ -30,7 +27,3 @@ services:
         fromDatabase:
           name: nextcloud
           property: host
-      - key: NEXTCLOUD_ADMIN_USER
-        sync: false
-      - key: NEXTCLOUD_ADMIN_PASSWORD
-        sync: false
