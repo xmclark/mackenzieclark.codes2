@@ -1,3 +1,7 @@
+databases:
+  - name: nextcloud
+    plan: starter
+
 services:
   - type: web
     name: nextcloud
@@ -8,3 +12,27 @@ services:
     disk:
       name: data
       mountPath: /var/www/html
+    disk:
+      name: data
+      mountPath: /data
+    envVars:
+      - key: POSTGRES_USER
+        fromDatabase:
+          name: nextcloud
+          property: user
+      - key: POSTGRES_PASSWORD
+        fromDatabase:
+          name: nextcloud
+          property: password
+      - key: POSTGRES_DB
+        fromDatabase:
+          name: nextcloud
+          property: database
+      - key: POSTGRES_HOST
+        fromDatabase:
+          name: nextcloud
+          property: host
+      - key: NEXTCLOUD_ADMIN_USER
+        sync: false
+      - key: NEXTCLOUD_ADMIN_PASSWORD
+        sync: false
