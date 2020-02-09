@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: nextcloud
+    env: docker
+    repo: https://github.com/go-gitea/gitea.git
+    dockerfilePath: ./Dockerfile
+    dockerContext: ./
+    disk:
+      name: data
+      mountPath: /var/www/html
