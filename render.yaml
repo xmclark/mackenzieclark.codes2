@@ -12,9 +12,6 @@ services:
     disk:
       name: data
       mountPath: /var/www/html
-    disk:
-      name: data
-      mountPath: /data
     envVars:
       - key: POSTGRES_USER
         fromDatabase:
