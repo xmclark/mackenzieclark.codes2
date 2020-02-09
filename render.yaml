@@ -10,9 +10,9 @@ services:
     repo: https://github.com/nextcloud/docker.git
     dockerfilePath: /.examples/dockerfiles/cron/apache/Dockerfile
     dockerContext: /.examples/dockerfiles/cron/apache
-    disk:
-      name: data
-      mountPath: /var/www/html
+#    disk:
+#      name: data
+#      mountPath: /var/www/html
     envVars:
       - key: POSTGRES_USER
         fromDatabase:
