@@ -34,3 +34,5 @@ services:
         sync: false
       - key: NEXTCLOUD_ADMIN_PASSWORD
         sync: false
+      - key: NEXTCLOUD_TRUSTED_DOMAINS
+        value: 'nextcloud.onrender.com'
