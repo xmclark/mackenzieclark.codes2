@@ -1,12 +1,10 @@
 FROM nextcloud:apache
 
-RUN apt-get update && apt-get install -y \
-    supervisor \
-  && rm -rf /var/lib/apt/lists/* \
-  && mkdir -p /var/log/supervisord /var/run/supervisord
-
-COPY supervisord.conf /
+RUN apt-get update && apt-get install -y supervisor
+RUN mkdir -p /var/log/supervisor
+RUN mkdir -p /var/run/supervisord
+COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 ENV NEXTCLOUD_UPDATE=1
 
-CMD ["/usr/bin/supervisord", "-c", "/supervisord.conf"]
+CMD ["/usr/bin/supervisord"]
