@@ -38,3 +38,8 @@ services:
         fromDatabase:
           name: nextcloud
           property: host
+      - key: REDIS_HOST
+        fromService:
+          name: nextcloud-redis
+          type: pserv
+          property: host
