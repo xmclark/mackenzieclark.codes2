@@ -9,9 +9,6 @@ services:
     repo: https://github.com/docker-library/redis
     dockerfilePath: /6.0-rc/Dockerfile
     dockerContext: /6.0-rc
-    disk:
-      name: data
-      mountPath: /data
 
 #  - type: web
 #    name: nextcloud
