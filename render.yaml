@@ -17,6 +17,8 @@ services:
     env: docker
     dockerfilePath: /nextcloud/Dockerfile
     dockerContext: /nextcloud
+    domains:
+      - nextcloud.mackenzieclark.codes
     disk:
       name: data
       mountPath: /var/www/html
