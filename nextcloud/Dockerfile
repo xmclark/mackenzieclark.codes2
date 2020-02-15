@@ -8,4 +8,4 @@ COPY entrypoint.sh /entrypoint.sh
 
 ENV NEXTCLOUD_UPDATE=1
 
-CMD ["/entrypoint.sh"]
+CMD ["sh", "/entrypoint.sh"]
