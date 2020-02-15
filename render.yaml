@@ -6,34 +6,35 @@ services:
   - type: pserv
     name: nextcloud-redis
     env: docker
-    repo: https://github.com/docker-library/redis
-    dockerfilePath: /6.0-rc/Dockerfile
-    dockerContext: /6.0-rc
-
-#  - type: web
-#    name: nextcloud
-#    plan: 'starter plus'
-#    env: docker
-#    repo: https://github.com/nextcloud/docker.git
-#    dockerfilePath: /.examples/dockerfiles/cron/apache/Dockerfile
-#    dockerContext: /.examples/dockerfiles/cron/apache
-#    disk:
-#      name: data
-#      mountPath: /data
-#    envVars:
-#      - key: POSTGRES_USER
-#        fromDatabase:
-#          name: nextcloud
-#          property: user
-#      - key: POSTGRES_PASSWORD
-#        fromDatabase:
-#          name: nextcloud
-#          property: password
-#      - key: POSTGRES_DB
-#        fromDatabase:
-#          name: nextcloud
-#          property: database
-#      - key: POSTGRES_HOST
-#        fromDatabase:
-#          name: nextcloud
-#          property: host
+    repo: https://github.com/render-examples/redis
+    disk:
+      name: data
+      mountPath: /var/lib/redis
+      sizeGB: 10
+  - type: web
+    name: nextcloud
+    plan: 'starter plus'
+    env: docker
+    dockerfilePath: /nextcloud/Dockerfile
+    dockerContext: /nextcloud
+    disk:
+      name: data
+      mountPath: /var/www/html
+      sizeGB: 500
+    envVars:
+      - key: POSTGRES_USER
+        fromDatabase:
+          name: nextcloud
+          property: user
+      - key: POSTGRES_PASSWORD
+        fromDatabase:
+          name: nextcloud
+          property: password
+      - key: POSTGRES_DB
+        fromDatabase:
+          name: nextcloud
+          property: database
+      - key: POSTGRES_HOST
+        fromDatabase:
+          name: nextcloud
+          property: host
