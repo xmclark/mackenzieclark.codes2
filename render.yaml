@@ -3,6 +3,11 @@ databases:
     plan: starter
 
 services:
+  - type: web
+    name: nginx
+    env: docker
+    dockerfilePath: /nginx/Dockerfile
+      dockerContext: /nginx
   - type: pserv
     name: nextcloud-redis
     env: docker
