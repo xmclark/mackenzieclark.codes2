@@ -6,6 +6,25 @@ services:
     dockerContext: /filestash-oidc-proxy
     domains:
       - filestash.mackenzieclark.codes
+    envVars:
+      - key: OAUTH2_PROXY_CLIENT_ID
+        sync: false
+      - key: OAUTH2_PROXY_UPSTREAMS
+        sync: false
+      - key: OAUTH2_PROXY_REVERSE_PROXY
+        value: true
+      - key: OAUTH2_PROXY_PROVIDER
+        value: keycloak
+      - key: OAUTH2_PROXY_CLIENT_SECRET
+        sync: false
+      - key: OAUTH2_PROXY_LOGIN_URL
+        sync: false
+      - key: OAUTH2_PROXY_REDEEM_URL
+        sync: false
+      - key: OAUTH2_PROXY_VALIDATE_URL
+        sync: false
+      - key: OAUTH2_PROXY_KEYCLOAK_GROUP
+        sync: false
   - type: pserv
     name: filestash
     plan: 'starter plus'
