@@ -3,11 +3,6 @@ databases:
     plan: starter
 
 services:
-  - type: web
-    name: nginx
-    env: docker
-    dockerfilePath: /nginx/Dockerfile
-    dockerContext: /nginx
   - type: pserv
     name: nextcloud-redis
     env: docker
@@ -28,25 +23,25 @@ services:
       name: nextcloud
       mountPath: /var/www/html
       sizeGB: 500
-    envVars:
-      - key: POSTGRES_USER
-        fromDatabase:
-          name: nextcloud
-          property: user
-      - key: POSTGRES_PASSWORD
-        fromDatabase:
-          name: nextcloud
-          property: password
-      - key: POSTGRES_DB
-        fromDatabase:
-          name: nextcloud
-          property: database
-      - key: POSTGRES_HOST
-        fromDatabase:
-          name: nextcloud
-          property: host
-      - key: REDIS_HOST
-        fromService:
-          name: nextcloud-redis
-          type: pserv
-          property: host
+#    envVars:
+#      - key: POSTGRES_USER
+#        fromDatabase:
+#          name: nextcloud
+#          property: user
+#      - key: POSTGRES_PASSWORD
+#        fromDatabase:
+#          name: nextcloud
+#          property: password
+#      - key: POSTGRES_DB
+#        fromDatabase:
+#          name: nextcloud
+#          property: database
+#      - key: POSTGRES_HOST
+#        fromDatabase:
+#          name: nextcloud
+#          property: host
+#      - key: REDIS_HOST
+#        fromService:
+#          name: nextcloud-redis
+#          type: pserv
+#          property: host
