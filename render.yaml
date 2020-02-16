@@ -1,6 +1,7 @@
 services:
   - type: web
     name: filestash-oidc-proxy
+    repo: https://github.com/xmclark/mackenzieclark.codes2
     dockerfilePath: ./filestash-oidc-proxy/Dockerfile
     dockerContext: ./filestash-oidc-proxy
     env: docker
