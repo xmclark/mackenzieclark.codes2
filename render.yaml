@@ -1,13 +1,18 @@
 services:
   - type: web
+    name: filestash-oidc-proxy
+    env: docker
+    dockerfilePath: /filestash-oidc-proxy/Dockerfile
+    dockerContext: /filestash-oidc-proxy
+    domains:
+      - filestash.mackenzieclark.codes
+  - type: pserv
     name: filestash
     plan: 'starter plus'
     env: docker
     dockerfilePath: /filestash/Dockerfile
     dockerContext: /filestash
-    domains:
-      - filestash.mackenzieclark.codes
-    disk:
-      name: filestash
-      mountPath: /app/data
-      sizeGB: 25
+#    disk:
+#      name: filestash
+#      mountPath: /app/data
+#      sizeGB: 25
