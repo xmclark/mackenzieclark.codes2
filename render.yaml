@@ -3,12 +3,11 @@ services:
     name: filestash
     plan: 'starter plus'
     env: docker
-    repo: https://github.com/mickael-kerjean/filestash
-    dockerfilePath: /docker/Dockerfile
-    dockerContext: /docker
+    dockerfilePath: /filestash/Dockerfile
+    dockerContext: /filestash
     domains:
       - filestash.mackenzieclark.codes
     disk:
-      name: nextcloud
+      name: filestash
       mountPath: /app/data
       sizeGB: 25
