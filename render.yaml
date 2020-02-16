@@ -7,7 +7,7 @@ services:
     name: nginx
     env: docker
     dockerfilePath: /nginx/Dockerfile
-      dockerContext: /nginx
+    dockerContext: /nginx
   - type: pserv
     name: nextcloud-redis
     env: docker
