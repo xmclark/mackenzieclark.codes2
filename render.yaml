@@ -38,9 +38,10 @@ services:
           name: nextcloud
           property: database
       - key: POSTGRES_HOST
-        fromDatabase:
-          name: nextcloud
-          property: host
+        sync: false
+#        fromDatabase:
+#          name: nextcloud
+#          property: host
       - key: REDIS_HOST
         fromService:
           name: nextcloud-redis
