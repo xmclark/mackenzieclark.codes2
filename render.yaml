@@ -20,7 +20,7 @@ services:
     domains:
       - nextcloud.mackenzieclark.codes
     disk:
-      name: data
+      name: nextcloud
       mountPath: /var/www/html
       sizeGB: 500
     envVars:
