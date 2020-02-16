@@ -21,7 +21,9 @@ services:
         sync: false
       - key: OAUTH2_PROXY_COOKIE_SECURE
         value: true
-      - key: OAUTH2_PROXY_EMAIL_DOMAIN
+      - key: OAUTH2_PROXY_COOKIE_SECRET
+        sync: false
+      - key: OAUTH2_PROXY_EMAIL_DOMAINS
         value: '*'
 
   - type: pserv
