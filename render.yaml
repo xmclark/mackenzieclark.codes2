@@ -11,18 +11,18 @@ services:
       name: data
       mountPath: /var/lib/redis
       sizeGB: 10
-  - type: web
-    name: nextcloud
-    plan: 'starter plus'
-    env: docker
-    dockerfilePath: /nextcloud/Dockerfile
-    dockerContext: /nextcloud
-    domains:
-      - nextcloud.mackenzieclark.codes
-    disk:
-      name: nextcloud
-      mountPath: /var/www/html
-      sizeGB: 500
+#  - type: web
+#    name: nextcloud
+#    plan: 'starter plus'
+#    env: docker
+#    dockerfilePath: /nextcloud/Dockerfile
+#    dockerContext: /nextcloud
+#    domains:
+#      - nextcloud.mackenzieclark.codes
+#    disk:
+#      name: nextcloud
+#      mountPath: /var/www/html
+#      sizeGB: 500
 #    envVars:
 #      - key: POSTGRES_USER
 #        fromDatabase:
