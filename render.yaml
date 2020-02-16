@@ -1,8 +1,8 @@
 services:
   - type: web
     name: filestash-oidc-proxy
-    repo: https://github.com/pusher/oauth2_proxy
-    commit: 3a843f815d8bec6792eaee35bc812d06788c533f
+    repo: https://github.com/xmclark/oauth2_proxy
+    branch: fix
     env: docker
     domains:
       - filestash.mackenzieclark.codes
