@@ -37,3 +37,10 @@ services:
     env: docker
     dockerfilePath: /filestash/Dockerfile
     dockerContext: /filestash
+    autoDeploy: false
+
+  - type: pserv
+    name: nginx
+    env: docker
+    dockerfilePath: /nginx/Dockerfile
+    dockerContext: /nginx
