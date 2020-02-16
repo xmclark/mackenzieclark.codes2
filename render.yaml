@@ -12,6 +12,8 @@ services:
         sync: false
       - key: OAUTH2_PROXY_UPSTREAMS
         sync: false
+      - key: OAUTH2_PROXY_REDIRECT_URL
+        sync: false
       - key: OAUTH2_PROXY_REVERSE_PROXY
         value: true
       - key: OAUTH2_PROXY_PROVIDER
