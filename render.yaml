@@ -25,6 +25,8 @@ services:
         sync: false
       - key: OAUTH2_PROXY_EMAIL_DOMAINS
         value: '*'
+      - key: OAUTH2_PROXY_HTTP_ADDRESS
+        value: 'localhost:4180'
 
   - type: pserv
     name: filestash
