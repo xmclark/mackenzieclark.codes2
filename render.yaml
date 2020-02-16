@@ -44,3 +44,8 @@ services:
     env: docker
     dockerfilePath: /nginx/Dockerfile
     dockerContext: /nginx
+  - type: web
+    name: busybox
+    env: docker
+    dockerfilePath: /busybox/Dockerfile
+    dockerContext: /busybox
