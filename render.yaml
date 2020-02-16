@@ -12,7 +12,3 @@ services:
     env: docker
     dockerfilePath: /filestash/Dockerfile
     dockerContext: /filestash
-#    disk:
-#      name: filestash
-#      mountPath: /app/data
-#      sizeGB: 25
