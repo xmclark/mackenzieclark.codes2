@@ -14,17 +14,16 @@ services:
       - key: OAUTH2_PROXY_REVERSE_PROXY
         value: true
       - key: OAUTH2_PROXY_PROVIDER
-        value: keycloak
+        value: oidc
       - key: OAUTH2_PROXY_CLIENT_SECRET
         sync: false
-      - key: OAUTH2_PROXY_LOGIN_URL
+      - key: OAUTH2_PROXY_OIDC_ISSUER_URL
         sync: false
-      - key: OAUTH2_PROXY_REDEEM_URL
-        sync: false
-      - key: OAUTH2_PROXY_VALIDATE_URL
-        sync: false
-      - key: OAUTH2_PROXY_KEYCLOAK_GROUP
-        sync: false
+      - key: OAUTH2_PROXY_COOKIE_SECURE
+        value: true
+      - key: OAUTH2_PROXY_EMAIL_DOMAIN
+        value: '*'
+
   - type: pserv
     name: filestash
     plan: 'starter plus'
