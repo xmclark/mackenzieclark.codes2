@@ -1,1 +1,1 @@
-FROM quay.io/pusher/oauth2_proxy:v4.1.0
+FROM quay.io/pusher/oauth2_proxy:v5.0.0
