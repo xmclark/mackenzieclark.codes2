@@ -1,1 +1,1 @@
-FROM quay.io/pusher/oauth2_proxy:latest
+FROM xmclark/oauth2_proxy:latest
